@@ -1,0 +1,69 @@
+  770  cd 05-Ansible/
+  771  ls
+  772  ansible-doc  -l 
+  773  ansible-doc  ping
+  774  ls
+  775  mkdir 02-Ansible-Config
+  776  ls
+  777  cp -rf 01-Inventory/inventory  02-Ansible-Config/
+  778  ls
+  779  cd 02-Ansible-Config/
+  780  ls
+  781  mv inventory hosts
+  782  ls
+  783  vim hosts 
+  784  ls
+  785  ansible web -i hosts -m ping 
+  786  > /root/.ssh/known_hosts 
+  787  exit
+  788  cd devops301-mindtree-15-June-2021/05-Ansible/02-Ansible-Config/
+  789  ls
+  790  ansible web -i hosts -m ping 
+  791  cat /root/.ssh/known_hosts 
+  792  cat /root/.ssh/known_hosts -u root -k 
+  793  ansible web -i hosts -m ping -u root -k 
+  794  ansible web -i hosts -m command -a 'df -h' -u root -k 
+  795  ansible web -i hosts -m command -a 'df -h' 
+  796  ls
+  797  ansible all -i hosts -m command -a 'df -h' -u root -k 
+  798  ls
+  799  vim ansible.cfg
+  800  ansible all -i hosts -m command -a 'df -h' -u root -k 
+  801  ansible all -i hosts -m command -a 'df -h' 
+  802  ansible web -i hosts -m command -a 'df -h' 
+  803  vim ansible.cfg 
+  804  ls
+  805  cat /root/.ssh/known_hosts 
+  806  ansible web -i hosts -m command -a 'df -h' 
+  807  cat /root/.ssh/known_hosts 
+  808  ls
+  809  cat /etc/ansible/ansible.cfg | grep -i checking 
+  810  cat /etc/ansible/ansible.cfg | grep -i log_path
+  811  ls
+  812  vim ansible.cfg 
+  813  ls
+  814  ansible web -i hosts -m command -a 'df -h' 
+  815  less /var/log/ansible.log 
+  816  ls
+  817  vim ansible.cfg 
+  818  ls
+  819  vim /etc/ansible/ansible.cfg 
+  820  ls
+  821  vim ansible.cfg 
+  822  ls
+  823  vim ansible.cfg 
+  824  ls
+  825  ansible web -i hosts -m apt -a 'name=ntp state=present' 
+  826  ls
+  827  vim ansible.cfg 
+  828  ansible web -i hosts -m apt -a 'name=ntp state=present' 
+  829  ls
+  830  cd ..
+  831  ls
+  832  cd ..
+  833  ls
+  834  git add . ; git commit -m "02-Ansible-Config"; git push 
+  835  ls
+  836  history 
+  837  ls
+  838  history > 05-Ansible/History.txt
