@@ -63,7 +63,31 @@ node('master') {
     stage('Archive Artifact') {
       archiveArtifacts artifacts: 'target/*.war', followSymlinks: false
     }  
+
+
+   stage('Download Package') {
+   def downloadSpec = """{ 
+     "files": [
+       {
+        "pattern": "petclinic-war/*.war",
+         "target": "ansible-code/roles/petclinic/files/"
+       }
+      ]
+
+   }"""
+      server.download spec: downloadSpec
+   }
+
+  stage('Getting Ready For Ansible Deployment'){
+     sh "echo \'<h1>JENKINS TASK BUILD ID: ${env.BUILD_DISPLAY_NAME}</h1>\' > ansible-code/roles/petclinic/files/index.html"
+  }
+
+  
+
     
+  stage('Ansible Deployment'){
+     sh "cd ansible-code;ansible-playbook petclinic.yaml"
+  }
   
     
   }
