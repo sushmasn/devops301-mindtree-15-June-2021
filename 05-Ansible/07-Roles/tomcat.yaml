@@ -1,0 +1,8 @@
+---
+
+- hosts: web
+  name: "My Tomcat App Server Deployment"
+  become: yes
+  roles:
+  - firewall
+  - tomcat 

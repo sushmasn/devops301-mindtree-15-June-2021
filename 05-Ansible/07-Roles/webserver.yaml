@@ -1,0 +1,10 @@
+---
+
+- hosts: web
+  name: WebServer Setup
+  become: yes
+  roles:
+  - firewall
+  - webserver
+
+
