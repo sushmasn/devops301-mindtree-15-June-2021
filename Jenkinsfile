@@ -9,7 +9,7 @@ node('master') {
 	
     
     stage('Git-CheckOut') {
-      git branch: 'main', url: 'https://github.com/amitvashisttech/devops301-mindtree-15-June-2021.git'
+      git branch: 'main', url: 'https://github.com/sushmasn/devops301-mindtree-15-June-2021.git'
     }  
     
   dir(project_path) {
