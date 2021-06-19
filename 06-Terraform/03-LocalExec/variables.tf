@@ -3,12 +3,12 @@ variable "key_name" {
 }
 
 variable "pvt_key_name" {
-  default = "/root/.ssh/my-key.pem"
+  default = "/home/labuser/day2/my-key.pem"
 }
 
 
 variable "sg_id" {
-  default = "sg-0ba7d2699a8e28cf7"
+  default = "sg-c7041fb1"
 }
 
 variable "region" {
