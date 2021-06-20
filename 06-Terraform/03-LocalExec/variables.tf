@@ -3,7 +3,7 @@ variable "key_name" {
 }
 
 variable "pvt_key_name" {
-  default = "/home/labuser/day2/my-key-pair.pem"
+  default = "/var/lib/jenkins/my-key-pair.pem"
 }
 
 
