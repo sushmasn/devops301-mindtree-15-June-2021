@@ -3,12 +3,12 @@ variable "key_name" {
 }
 
 variable "pvt_key_name" {
-  default = "/home/labuser/day2/my-key.pem"
+  default = "/home/labuser/day2/my-key-pair.pem"
 }
 
 
 variable "sg_id" {
-  default = "sg-c7041fb1"
+  default = "sg-02daed658b34bd553"
 }
 
 variable "region" {
